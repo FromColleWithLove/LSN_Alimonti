@@ -1,0 +1,22 @@
+0
+1
+1.5
+1.5
+1.5
+150.
+0.
+0.
+5000
+1
+500	
+	ReadInput>> norb 0=psi1 1=psi2;
+	ReadInput>> GU 0=uniform 1=gaussian;
+	ReadInput>> ax /sigmax;
+	ReadInput>> ay /sigmay;
+	ReadInput>> az /sigmaz;
+	ReadInput>> xi;
+	ReadInput>> yi;
+	ReadInput>> zi;
+	ReadInput>> nblk;
+	ReadInput>> nstep;
+	ReadInput>> nstepeq;
