@@ -34,11 +34,12 @@ double l2[n_cromosoma]={0.};
 double lord[n_cromosoma];
 //matrix with cities'coordinates
 double cityxy[n_cities][2];
-double beta = 10,bias=0;
+double beta = 50,bias=0;
 double sqdist,bestl1,worstl1,tg_length,glob_bestl1;
 bool popok;
 int ch_index,nr_best,igen,offspring_ptr;
 int parent1,parent2;
+double pacc=0.,ptried=0.;
 //functions,methods
 
 
@@ -155,6 +156,7 @@ int main (int argc, char *argv[]){
 		cout<<"Best overall : "<<glob_bestl1<<endl;
 		cout<<"Best : "<<bestl1 <<endl;
 		cout<<"Worst : "<<worstl1 <<endl;
+		cout<<"Acceptance rate so far: "<<pacc/ptried<<endl;
 		cout<<"--------------------------------------------------"<<endl;
 		bdist<<igen<<" "<<glob_bestl1<<endl;
 	}
@@ -398,17 +400,26 @@ void CosmicRain(){ //mutates a little bit of eveything
 	return;	
 }
 void ParentSelector(){//metropolis choice of new parents
-	int newp;
+	int newp,check;
 	double p;
+	check=0;
 	newp = floor(rnd.Rannyu()*n_cromosoma);
 	p = exp(-beta*(l1[newp]+bias-l1[parent1]));
 	if (rnd.Rannyu() <= p) parent1 = newp;
-	//do{
+	do{
 	newp = floor(rnd.Rannyu()*n_cromosoma);
 	p = exp(-beta*(l1[newp]-l1[parent2]));
 	if (rnd.Rannyu() <= p) parent2 = newp;
-	//}while(parent2==parent1);*/
-	if(parent2==parent1) parent2= (parent1+2)%n_cromosoma;
+	check++;
+	ptried+=1;
+	if (check > 1000*n_cromosoma) {
+	cout<<"WARNING:PARENTS TRIED SURPASSED NR CHROMOSOMA*1000 TRY REDUCE BETA"<<endl;
+	cout<<"SWITCHING TO RANDOM SELECTION"<<endl;
+	parent2=newp;//problem
+	}
+	}while(parent2==parent1);
+	pacc+=1;
+	//if(parent2==parent1) parent2= (parent1+2)%n_cromosoma;
 	return;
 }
 
