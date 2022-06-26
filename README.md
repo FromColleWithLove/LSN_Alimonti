@@ -22,4 +22,6 @@ Excercises for the Numerical Simulation Laboratory course at University of Milan
   - Input filename are : samplingmethod(+h if it has some ext. field)\_ising.dat ex : gibbsh_ising.dat
 ### Ex 07:
   - Same as Ex 04
-  - autocorrelation_calc needs these parameters from command line :   pts(number of actually computed autocorr), stop(where to stop computing autocor) ,size(how many datapts. in file)
+  - autocorrelation_calc needs these parameters from command line :   pts(number of actually computed autocorr), stop(where to stop computing autocor) ,size(how many datapts. in file). It will then prompt for a filename
+
+### Ex 08
