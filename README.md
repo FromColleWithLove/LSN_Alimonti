@@ -25,3 +25,11 @@ Excercises for the Numerical Simulation Laboratory course at University of Milan
   - autocorrelation_calc needs these parameters from command line :   pts(number of actually computed autocorr), stop(where to stop computing autocor) ,size(how many datapts. in file). It will then prompt for a filename
 
 ### Ex 08
+
+### Ex 09
+ - Program needs as argument from command line a name, it will use name.map.in as input file
+
+### Ex 10
+ - Same as 9
+### Ex 11
+### Ex 12
