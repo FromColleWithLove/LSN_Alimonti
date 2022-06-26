@@ -31,7 +31,7 @@
   
   k=0;
   
-  linspace(ts,1,1500,pts);
+  linspace(ts,1,stop,pts);
   cout<<"uca"<<endl;
 
   for(int k=0;k<size;k++){
