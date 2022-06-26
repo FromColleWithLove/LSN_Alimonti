@@ -30,7 +30,7 @@ int main(int argc, char *argv[])
   }
   else
   {
-  	cout<<"Insert the root name of the input file, of the form name_ising.in"<<endl;
+  	cout<<"Insert the root name of the input file, of the form name_ising.dat"<<endl;
   	cin >> nametmp;
   }
   strcpy(filename,"_ising.dat");
