@@ -13,5 +13,6 @@ Inside each folder, there will usually be a "source" folder which will contain t
   Will ask for parameters once running
 ## Ex 04:
   Source code is in MDNVE_MCNVT folder
+  Will ask for a name and use input.name as input file
 ## Ex 05:
 
