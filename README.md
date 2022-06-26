@@ -8,5 +8,10 @@ Inside each folder, there will usually be a "source" folder which will contain t
 ## Ex 01:
   source/main.exe expects M,N as input from command line
 ## Ex 02:
-  source/main.exe and source/imp_sampling/exe expect M,N as input from command line
-  
+  source/main.exe and source/imp_sampling/main.exe expect M,N as input from command line
+## Ex 03:
+  Will ask for parameters once running
+## Ex 04:
+  Source code is in MDNVE_MCNVT folder
+## Ex 05:
+
