@@ -13,7 +13,6 @@ _/    _/  _/_/_/  _/_/_/_/ email: Davide.Galli@unimi.it
 #include <string>
 #include <cmath>
 #include "random.h"
-#include "tsp.h"
 #include "asl.h"
 using namespace std;
    
