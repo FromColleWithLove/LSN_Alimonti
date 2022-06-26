@@ -1,4 +1,4 @@
-CC = ~/opt/openmpi/bin/mpicxx
+CC = mpicxx
 CFLAGS = -Wall -O3 --std=c++11
 
 main.exe : main.o random.o asl.o
