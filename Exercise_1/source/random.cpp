@@ -97,7 +97,7 @@ double Random :: Cauchy(double Y){
 	//generate random uniform number
 	y=  Rannyu();
 	//invert cumulative
-	x= Y*(tan(M_PI * ( y - .5)))
+	x= Y*(tan(M_PI * ( y - .5)));
 	
 	return x;
 	
